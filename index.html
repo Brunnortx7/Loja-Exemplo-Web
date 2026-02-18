@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loja Exemplo • Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="index.html" aria-label="Ir para a página inicial">
+      <span class="logo" aria-hidden="true">LE</span>
+      <span class="brand-name">Loja Exemplo</span>
+    </a>
+
+    <nav class="nav">
+      <a class="nav-link" href="#sobre">Sobre</a>
+      <a class="nav-link" href="#servicos">Serviços</a>
+      <a class="nav-link" href="#contato">Contato</a>
+      <a class="btn" href="loja.html">Ir para a Loja</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Uma loja simples, bonita e rápida.</h1>
+        <p>
+          Catálogo organizado, carrinho e finalização direto no WhatsApp.
+          Perfeito pra vender sem complicação.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn" href="loja.html">Ver produtos</a>
+          <a class="btn ghost" href="#contato">Falar com a gente</a>
+        </div>
+
+        <div class="badges">
+          <span class="tag">Entrega local</span>
+          <span class="tag">Pagamento no Pix</span>
+          <span class="tag">Atendimento rápido</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>Horário</h3>
+        <p class="muted">Seg–Sex • 09h–18h</p>
+        <h3 style="margin-top:14px;">WhatsApp</h3>
+        <p class="muted" id="homeWhatsapp">Configure no script.js</p>
+        <p class="muted" style="margin-top:10px;">Clique em “Ver produtos” pra montar seu pedido.</p>
+      </div>
+    </section>
+
+    <section id="sobre" class="section">
+      <h2>Sobre</h2>
+      <p class="muted">
+        Aqui você coloca um texto curto sobre a loja: o que vende, onde atende, e por que é confiável.
+        Deixa simples e direto.
+      </p>
+    </section>
+
+    <section id="servicos" class="section grid-3">
+      <article class="info-card">
+        <h3>Qualidade</h3>
+        <p class="muted">Produtos selecionados e garantia de procedência.</p>
+      </article>
+      <article class="info-card">
+        <h3>Entrega</h3>
+        <p class="muted">Entrega local e opção de retirada.</p>
+      </article>
+      <article class="info-card">
+        <h3>Suporte</h3>
+        <p class="muted">Atendimento via WhatsApp com resposta rápida.</p>
+      </article>
+    </section>
+
+    <section id="contato" class="section contact">
+      <div class="contact-box">
+        <h2>Contato</h2>
+        <p class="muted">
+          Quer tirar dúvidas ou fazer encomenda? Chama no WhatsApp.
+        </p>
+
+        <div class="contact-row">
+          <div>
+            <strong>WhatsApp</strong>
+            <p class="muted" id="contactWhatsapp">—</p>
+          </div>
+          <div>
+            <strong>Local</strong>
+            <p class="muted">Sua cidade / bairro</p>
+          </div>
+        </div>
+
+        <a class="btn" href="loja.html">Ir para a Loja</a>
+      </div>
+
+      <div class="contact-box">
+        <h3>FAQ rápido</h3>
+        <details>
+          <summary>Como finaliza a compra?</summary>
+          <p class="muted">Você monta o carrinho e finaliza pelo WhatsApp com a lista pronta.</p>
+        </details>
+        <details>
+          <summary>Formas de pagamento</summary>
+          <p class="muted">Pix, dinheiro, ou combinar no atendimento.</p>
+        </details>
+        <details>
+          <summary>Entrega</summary>
+          <p class="muted">Entrega local / retirada. Combine no WhatsApp.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="infos">
+        <strong>Loja Exemplo</strong>
+        <p>Vendas online • Atendimento via WhatsApp</p>
+      </div>
+
+      <div class="infos">
+        <strong>Contato</strong>
+        <p id="footerWhatsapp">—</p>
+      </div>
+
+      <div class="infos">
+        <strong>Links</strong>
+        <p><a href="loja.html">Loja</a> • <a href="#contato">Contato</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
