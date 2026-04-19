@@ -3,86 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Loja Exemplo • Loja</title>
+  <title>Loja Exemplo — Catálogo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <div class="glow-orb a" aria-hidden="true"></div>
+  <div class="glow-orb b" aria-hidden="true"></div>
+
+  <!-- HEADER -->
   <header class="header">
-    <a class="brand" href="index.html" aria-label="Ir para a página inicial">
+    <a class="brand" href="index.html" aria-label="Página inicial">
       <span class="logo" aria-hidden="true">LE</span>
       <span class="brand-name">Loja Exemplo</span>
     </a>
-
     <div class="nav">
-      <a href="index.html" class="nav-link">Home</a>
-      
+      <a href="index.html" class="nav-link">← Início</a>
       <button class="cart-btn" id="openCartBtn" type="button" aria-haspopup="dialog" aria-controls="cartDrawer">
-        Carrinho <span class="cart-badge" id="cartCount">0</span>
+        <span class="cart-btn-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg>
+        </span>
+        Carrinho
+        <span class="cart-badge" id="cartCount">0</span>
       </button>
     </div>
   </header>
 
   <main class="container">
-    <section class="section shop-head">
+
+    <!-- SHOP HEAD -->
+    <div class="shop-head">
       <div>
-        <h1>Loja</h1>
-        <p class="muted">Escolha seus produtos e finalize direto no WhatsApp.</p>
+        <span class="section-tag">Catálogo</span>
+        <h1 style="font-family:var(--font-display);font-size:clamp(28px,3.5vw,46px);font-weight:800;letter-spacing:-.02em;line-height:1.1;">Nossos produtos</h1>
+        <p class="muted" style="margin-top:8px;font-size:15px;">Escolha o que quiser e finalize direto no WhatsApp.</p>
       </div>
-
       <div class="toolbar">
-        <input id="searchInput" class="search" type="search" placeholder="Buscar produto..." />
-        <select id="categorySelect" class="select">
-          <option value="all">Todas categorias</option>
-        </select>
+        <input id="searchInput" class="search" type="search" placeholder="Buscar produto…" />
+        <select id="categorySelect" class="select"></select>
       </div>
-    </section>
+    </div>
 
-    <section class="section">
-      <h2>Mais vendidos</h2>
+    <!-- PRODUCT GRID -->
+    <section class="section" style="padding-top:20px">
+      <div class="section-header">
+        <h2 style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--muted);">Todos os produtos</h2>
+        <span id="productCount" style="font-size:13px;color:var(--muted)"></span>
+      </div>
       <div class="grid" id="productGrid"></div>
     </section>
 
+    <!-- HOW IT WORKS -->
     <section class="section">
-      <h2>Como funciona</h2>
-      <div class="grid-3">
-        <article class="info-card">
-          <h3>1) Adicione</h3>
-          <p class="muted">Escolha os itens e coloque no carrinho.</p>
-        </article>
-        <article class="info-card">
-          <h3>2) Revise</h3>
-          <p class="muted">Ajuste quantidades e confira o total.</p>
-        </article>
-        <article class="info-card">
-          <h3>3) Finalize</h3>
-          <p class="muted">Abrimos o WhatsApp com a mensagem pronta.</p>
-        </article>
+      <span class="section-tag">Como comprar</span>
+      <h2 class="section-title">Simples assim</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Adicione ao carrinho</h3>
+          <p>Clique no botão + em qualquer produto para adicioná-lo ao seu carrinho.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Revise seu pedido</h3>
+          <p>Abra o carrinho, ajuste quantidades e confira o valor total antes de finalizar.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Finalize no WhatsApp</h3>
+          <p>Clique em finalizar e enviamos a mensagem com o pedido completo prontinho.</p>
+        </div>
       </div>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo" style="display:grid;">LE</span>
+          <br>
+          <p>Loja Exemplo — vendas online com atendimento personalizado via WhatsApp.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <a href="index.html">Início</a>
+          <a href="loja.html">Loja</a>
+          <a href="index.html#contato">Contato</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <p id="footerWhatsapp">—</p>
+          <p>Camaçari, Bahia</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Loja Exemplo. Todos os direitos reservados.</span>
+        <span>Feito com ♥ na Bahia</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- OVERLAY -->
   <div class="overlay" id="overlay" hidden></div>
 
+  <!-- CART DRAWER -->
   <aside class="drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Carrinho" hidden>
     <header class="drawer-header">
-      <h2>Carrinho</h2>
+      <h2>Seu carrinho</h2>
       <button class="icon-btn" id="closeCartBtn" aria-label="Fechar carrinho" type="button">✕</button>
     </header>
-
     <div class="drawer-body">
       <div id="cartItems" class="cart-items"></div>
-
       <div class="cart-summary">
         <div class="summary-row">
-          <span>Total</span>
+          <span>Total estimado</span>
           <strong id="cartTotal">R$ 0,00</strong>
         </div>
-
         <div class="summary-actions">
           <button class="btn ghost" id="clearCartBtn" type="button">Limpar</button>
-          <button class="btn" id="checkoutBtn" type="button">Finalizar no WhatsApp</button>
+          <button class="btn" id="checkoutBtn" type="button">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.35a16 16 0 0 0 6.64 6.64l1.41-1.41a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            WhatsApp
+          </button>
         </div>
-
         <p class="hint" id="checkoutHint"></p>
       </div>
     </div>
