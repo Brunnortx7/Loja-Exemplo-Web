@@ -3,135 +3,188 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Loja Exemplo • Home</title>
+  <title>Loja Exemplo — Compre com estilo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Ambient orbs -->
+  <div class="glow-orb a" aria-hidden="true"></div>
+  <div class="glow-orb b" aria-hidden="true"></div>
+
+  <!-- HEADER -->
   <header class="header">
-    <a class="brand" href="index.html" aria-label="Ir para a página inicial">
+    <a class="brand" href="index.html" aria-label="Página inicial">
       <span class="logo" aria-hidden="true">LE</span>
       <span class="brand-name">Loja Exemplo</span>
     </a>
-
     <nav class="nav">
       <a class="nav-link" href="#sobre">Sobre</a>
       <a class="nav-link" href="#servicos">Serviços</a>
       <a class="nav-link" href="#contato">Contato</a>
-      <a class="btn" href="loja.html">Ir para a Loja</a>
+      <a class="btn" href="loja.html">Ver produtos</a>
     </nav>
   </header>
 
   <main class="container">
+
+    <!-- HERO -->
     <section class="hero">
       <div class="hero-text">
-        <h1>Uma loja simples, bonita e rápida.</h1>
-        <p>
-          Catálogo organizado, carrinho e finalização direto no WhatsApp.
-          Perfeito pra vender sem complicação.
+        <div class="hero-eyebrow">Atendimento via WhatsApp</div>
+        <h1>Produtos que você<br><em>vai adorar.</em></h1>
+        <p class="hero-sub">
+          Catálogo organizado, preços transparentes e finalização
+          direto no WhatsApp. Simples, rápido, sem complicação.
         </p>
-
         <div class="hero-actions">
-          <a class="btn" href="loja.html">Ver produtos</a>
-          <a class="btn ghost" href="#contato">Falar com a gente</a>
+          <a class="btn" href="loja.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            Explorar loja
+          </a>
+          <a class="btn ghost" href="#contato">Falar conosco</a>
         </div>
-
         <div class="badges">
-          <span class="tag">Entrega local</span>
-          <span class="tag">Pagamento no Pix</span>
-          <span class="tag">Atendimento rápido</span>
+          <span class="tag">📦 Entrega local</span>
+          <span class="tag">⚡ PIX instantâneo</span>
+          <span class="tag">💬 Suporte rápido</span>
         </div>
       </div>
 
-      <div class="hero-card">
-        <h3>Horário</h3>
-        <p class="muted">Seg–Sex • 09h–18h</p>
-        <h3 style="margin-top:14px;">WhatsApp</h3>
-        <p class="muted" id="homeWhatsapp">Configure no script.js</p>
-        <p class="muted" style="margin-top:10px;">Clique em “Ver produtos” pra montar seu pedido.</p>
+      <div class="hero-card reveal">
+        <div class="hero-card-label">Funcionamento</div>
+        <h3>Horário de atendimento</h3>
+        <p class="hero-card-val">Segunda a Sexta, 09h – 18h</p>
+        <div class="hero-card-divider"></div>
+        <div class="hero-card-label">Contato direto</div>
+        <h3>WhatsApp</h3>
+        <p class="hero-card-val" id="homeWhatsapp">Carregando…</p>
+        <div class="hero-card-divider"></div>
+        <p class="hero-card-note">Monte seu pedido, clique em finalizar e receba a mensagem pronta no WhatsApp.</p>
       </div>
     </section>
 
-    <section id="sobre" class="section">
-      <h2>Sobre</h2>
-      <p class="muted">
-Nossa missão é trazer produtos que unem estilo, tecnologia e praticidade. 
-Aqui você compra com tranquilidade, pagamento seguro e atendimento personalizado.
+    <!-- SOBRE -->
+    <section id="sobre" class="section reveal">
+      <span class="section-tag">Quem somos</span>
+      <h2 class="section-title">Uma loja feita com cuidado,<br>para pessoas exigentes.</h2>
+      <p class="section-sub">
+        Nossa missão é oferecer produtos selecionados que unem estilo, tecnologia
+        e praticidade — com atendimento personalizado e compra segura.
       </p>
     </section>
 
-    <section id="servicos" class="section grid-3">
-      <article class="info-card">
-        <h3>Qualidade</h3>
-        <p class="muted">Produtos selecionados e garantia de procedência.</p>
-      </article>
-      <article class="info-card">
-        <h3>Entrega</h3>
-        <p class="muted">Entrega local e opção de retirada.</p>
-      </article>
-      <article class="info-card">
-        <h3>Suporte</h3>
-        <p class="muted">Atendimento via WhatsApp com resposta rápida.</p>
-      </article>
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="section">
+      <span class="section-tag">Por que escolher a gente</span>
+      <h2 class="section-title">O que nos diferencia</h2>
+      <div class="grid-3">
+        <article class="info-card reveal">
+          <div class="info-card-icon">✦</div>
+          <h3>Qualidade garantida</h3>
+          <p>Produtos selecionados com garantia de procedência e qualidade verificada antes de cada envio.</p>
+        </article>
+        <article class="info-card reveal" style="transition-delay:.1s">
+          <div class="info-card-icon">🚚</div>
+          <h3>Entrega local</h3>
+          <p>Entregamos na sua região com agilidade ou você pode retirar no local conforme sua preferência.</p>
+        </article>
+        <article class="info-card reveal" style="transition-delay:.2s">
+          <div class="info-card-icon">💬</div>
+          <h3>Suporte humano</h3>
+          <p>Atendimento via WhatsApp com resposta rápida. Sem bots, sem filas — fala direto com a gente.</p>
+        </article>
+      </div>
     </section>
 
-    <section id="contato" class="section contact">
-      <div class="contact-box">
-        <h2>Contato</h2>
-        <p class="muted">
-          Quer tirar dúvidas ou fazer encomenda? Chama no WhatsApp.
-        </p>
-
-        <div class="contact-row">
-          <div>
-            <strong>WhatsApp</strong>
-            <p class="muted" id="contactWhatsapp">—</p>
+    <!-- CONTATO -->
+    <section id="contato" class="section">
+      <div class="contact">
+        <div class="contact-box reveal">
+          <span class="section-tag">Fale conosco</span>
+          <h2>Manda uma mensagem</h2>
+          <p class="muted">Quer tirar dúvidas ou fazer uma encomenda? A gente responde rápido.</p>
+          <div class="contact-row">
+            <div>
+              <strong>WhatsApp</strong>
+              <p id="contactWhatsapp">—</p>
+            </div>
+            <div>
+              <strong>Localização</strong>
+              <p>Camaçari / Bahia</p>
+            </div>
           </div>
-          <div>
-            <strong>Local</strong>
-            <p class="muted">Camaçari / Bahia</p>
-          </div>
+          <a class="btn" href="loja.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/></svg>
+            Ir para a loja
+          </a>
         </div>
 
-        <a class="btn" href="loja.html">Ir para a Loja</a>
-      </div>
-
-      <div class="contact-box">
-        <h3>FAQ rápido</h3>
-        <details>
-          <summary>Como finaliza a compra?</summary>
-          <p class="muted">Você monta o carrinho e finaliza pelo WhatsApp com a lista pronta.</p>
-        </details>
-        <details>
-          <summary>Formas de pagamento</summary>
-          <p class="muted">Pix, dinheiro, ou combinar no atendimento.</p>
-        </details>
-        <details>
-          <summary>Entrega</summary>
-          <p class="muted">Entrega local / retirada. Combine no WhatsApp.</p>
-        </details>
+        <div class="contact-box reveal" style="transition-delay:.12s">
+          <span class="section-tag">Dúvidas</span>
+          <h2>Perguntas frequentes</h2>
+          <details>
+            <summary>Como funciona a compra?</summary>
+            <p>Você monta o carrinho na loja e clica em "Finalizar no WhatsApp". Abrimos a conversa com a lista do pedido pronta para você enviar.</p>
+          </details>
+          <details>
+            <summary>Quais formas de pagamento?</summary>
+            <p>Aceitamos PIX, dinheiro ou você pode combinar outras formas diretamente no atendimento.</p>
+          </details>
+          <details>
+            <summary>Como funciona a entrega?</summary>
+            <p>Realizamos entregas locais em Camaçari e região, ou você pode retirar no ponto de retirada. Combine pelo WhatsApp.</p>
+          </details>
+          <details>
+            <summary>Tem prazo de troca?</summary>
+            <p>Sim! Trabalhamos com garantia e política de trocas para sua satisfação. Entre em contato caso precise.</p>
+          </details>
+        </div>
       </div>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <div class="infos">
-        <strong>Loja Exemplo</strong>
-        <p>Vendas online • Atendimento via WhatsApp</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo" style="display:grid;">LE</span>
+          <br>
+          <p>Loja Exemplo — vendas online com atendimento personalizado via WhatsApp.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <a href="loja.html">Loja</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#contato">Contato</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <p id="footerWhatsapp">—</p>
+          <p>Camaçari, Bahia</p>
+          <p>Seg–Sex, 09h–18h</p>
+        </div>
       </div>
-
-      <div class="infos">
-        <strong>Contato</strong>
-        <p id="footerWhatsapp">—</p>
-      </div>
-
-      <div class="infos">
-        <strong>Links</strong>
-        <p><a href="loja.html">Loja</a> • <a href="#contato">Contato</a></p>
+      <div class="footer-bottom">
+        <span>© 2025 Loja Exemplo. Todos os direitos reservados.</span>
+        <span>Feito com ♥ na Bahia</span>
       </div>
     </div>
   </footer>
 
   <script src="script.js" defer></script>
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }}),
+      { threshold: 0.12 }
+    );
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
